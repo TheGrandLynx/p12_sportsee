@@ -1,0 +1,374 @@
+/* ---------------------------------------- */
+/* ==          VARIABLES             */
+/*---------------------------------------- */
+/* ---------------------------------------- */
+/* ==        GENERAL MIXINS            */
+/*---------------------------------------- */
+/* This is a mixin that will be used to create a breakpoint for the desktop. */
+/* Creating a filter that will recolor the image to the specified color. */
+/* ---------------------------------------- */
+/* ==              FONT                 */
+/*---------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ---------------------------------------- */
+/* ==            GENERAL                */
+/*---------------------------------------- */
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #ff0101;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff0101;
+}
+
+h1 {
+  color: #ff0101;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section {
+  width: 100%;
+  margin-top: 5.6875rem;
+  margin-left: 7.3125rem;
+  padding-top: 2rem;
+}
+
+#root {
+  display: flex;
+}
+
+/* ---------------------------------------- */
+/* ==                HEADER                */
+/*---------------------------------------- */
+.nav {
+  display: flex;
+  left: 20%;
+  justify-content: space-evenly;
+  width: 80%;
+}
+@media screen and (min-width: 1440px) {
+  .nav {
+    justify-content: space-between;
+    width: 70%;
+  }
+}
+.nav-active {
+  text-decoration: underline;
+}
+.nav-wrapper {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 5.6875rem;
+  background: #020203;
+}
+.nav-wrapper img {
+  width: 22%;
+  height: 3.75rem;
+}
+@media screen and (min-width: 1440px) {
+  .nav-wrapper img {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .nav-wrapper a {
+    width: 15%;
+  }
+}
+.nav-link, .nav-active {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* ---------------------------------------- */
+/* ==             SIDEBAR              */
+/*---------------------------------------- */
+.sidebar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7.3125rem;
+  height: 100%;
+  overflow: hidden;
+  background: #020203;
+  text-align: center;
+}
+.sidebar-button-wrapper {
+  margin: 0;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 8rem;
+  left: -8%;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  transform: rotate(-90deg);
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* ---------------------------------------- */
+/* ==            SIDEBAR BUTTON            */
+/*---------------------------------------- */
+.sidebar-button {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+.sidebar-button-logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.activity-charts {
+  box-sizing: border-box;
+  width: 52.1875rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.875rem;
+  border-radius: 5px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  font-size: 0.87rem;
+}
+@media screen and (min-width: 1440px) {
+  .activity-charts {
+    margin-bottom: 0;
+  }
+}
+.activity-charts div:first-child {
+  display: flex;
+}
+.activity-charts .tooltip {
+  display: block !important;
+  padding: 0.25rem 0.4375rem;
+  background-color: red;
+  color: white;
+  font-size: 0.6875rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.activity-charts .recharts-surface {
+  margin-right: 0.75rem !important;
+  margin-left: 0 !important;
+}
+.activity-charts .recharts-legend-item {
+  margin-right: 0 !important;
+  margin-left: 2rem;
+}
+.activity-charts .recharts-legend-item-text {
+  color: #74798c !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.activity-charts .chartactivity-title {
+  position: absolute;
+  color: #20253a;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+/* ---------------------------------------- */
+/* ==       CHART AVERAGE SESSIONS       */
+/*---------------------------------------- */
+.average-sessions {
+  position: relative;
+}
+.average-sessions .tooltip {
+  padding: 0.0625rem 0.4375rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+.average-sessions .recharts-text {
+  font-weight: 500;
+}
+
+.chartaverage-sessions-title {
+  position: absolute;
+  top: 1.8125rem;
+  left: 2.125rem;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.card {
+  display: flex;
+  width: 12.125em;
+  margin-bottom: 2.4375em;
+  padding: 2em;
+  border-radius: 5px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+.card p {
+  margin: 0;
+}
+.card-icon {
+  width: 1.1875em;
+  height: 1.1875em;
+}
+.card-icon-wrapper {
+  position: relative;
+  width: 3.75em;
+  height: 3.75em;
+  margin-right: 1.5rem;
+  border-radius: 6px;
+}
+.card-icon-wrapper.calorie {
+  background: rgba(255, 0, 0, 0.07);
+}
+.card-icon-wrapper.protein {
+  background: rgba(74, 184, 255, 0.1);
+}
+.card-icon-wrapper.carbohydrate {
+  background: rgba(249, 206, 35, 0.1);
+}
+.card-icon-wrapper.lipid {
+  background: rgba(253, 81, 129, 0.1);
+}
+.card-data-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card-title {
+  color: #282d30;
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+.card-subtitle {
+  color: #74798c;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.charts-card {
+  width: 16.25rem;
+  height: 16.25rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+.charts-card.average-sessions {
+  background-color: #ff0000;
+}
+.charts-card.performance {
+  background-color: #282d30;
+}
+.charts-card.goal {
+  background-color: #fbfbfb;
+}
+
+.smallChartsWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.score {
+  position: relative;
+}
+
+.chartgoal-title {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.875rem;
+  color: #20253a;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.chartgoal-label {
+  color: #9b9eac;
+  font-weight: 500;
+  line-height: 1.625rem;
+  text-align: center;
+}
+.chartgoal-label p {
+  margin: 0;
+}
+.chartgoal-label .percent {
+  color: #282d30;
+  font-size: 1.625rem;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */

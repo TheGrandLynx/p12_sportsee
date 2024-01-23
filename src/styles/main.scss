@@ -1,0 +1,13 @@
+
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/base';
+
+@import '../components/Header/style.scss';
+@import '../components/Sidebar/style.scss';
+@import '../components/SidebarButton/style.scss';
+@import '../components/ChartActivity/style.scss';
+@import '../components/ChartAverageSessions/style.scss';
+@import '../components/Card/style.scss';
+@import '../components/ChartsCard/style.scss';
+@import '../components/ChartGoal/style.scss';

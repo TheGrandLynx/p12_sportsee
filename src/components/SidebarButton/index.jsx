@@ -1,18 +1,26 @@
 import PropTypes from 'prop-types'
 
-
+/**
+ * Render a button with an image
+ *
+ * @category Components
+ * @component
+ * @returns { React.Component } A React component
+ */
 
 function SidebarButton({ logo }) {
-	return (
-		<button className="sidebar-button">
-			<img src={logo} alt="" className="sidebar-button-logo" />
-		</button>
-	)
+  return (
+    <button className="sidebar-button">
+      <img src={logo} alt="" className="sidebar-button-logo" />
+    </button>
+  )
 }
 
 SidebarButton.propTypes = {
-	
-	     logo: PropTypes.string.isRequired,
+  /**
+   * Logo path
+   */
+  logo: PropTypes.string.isRequired,
 }
 
 export default SidebarButton

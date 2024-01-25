@@ -49,6 +49,6 @@ export const getData = async (type, id) => {
       break
     default:
   }
-  console.log(data)
+  //console.log(data)
   return data.data
 }

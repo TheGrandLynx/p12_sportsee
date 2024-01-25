@@ -23,35 +23,28 @@ function Profil() {
 
   const userDataInfos = async () => {
     const request = await getData('USER_MAIN_DATA', id)
-    console.log(request)
     wUser.setUserInfos(request)
     SetLoading(false)
   }
   userDataInfos()
   const userDataActivty = async () => {
     const request = await getData('USER_ACTIVITY', id)
-    console.log(request)
     wUser.setUserActivity(request)
     SetLoading4(false)
   }
   userDataActivty()
   const userDataAverageSessions = async () => {
     const request = await getData('USER_AVERAGE_SESSIONS', id)
-    console.log(request)
     wUser.setUserAverageSessions(request)
     SetLoading2(false)
   }
   userDataAverageSessions()
   const userDataPerformance = async () => {
     const request = await getData('USER_PERFORMANCE', id)
-    console.log(request)
     wUser.setUserPerformance(request)
     SetLoading3(false)
   }
   userDataPerformance()
-
-  console.log(wUser)
-  console.log(wUser.userInfos)
 
   document.title = 'Profil - SportSee'
 
@@ -105,7 +98,6 @@ function Profil() {
 
   return (
     <section className="profil-wrapper">
-      {console.log(data)}
       {data && (
         <div className="profil">
           <h2 className="profil-title">

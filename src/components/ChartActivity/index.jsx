@@ -21,6 +21,9 @@ import CustomToolTip from './CustomToolTip'
  */
 
 function ChartActivity({ data }) {
+  {
+    /* soutenance 11 */
+  }
   return (
     <>
       <h3 className="chartactivity-title">Activité quotidienne</h3>

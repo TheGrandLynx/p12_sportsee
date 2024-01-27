@@ -4,28 +4,14 @@ import {
   getUserInfos,
   getUserPerformance,
 } from './Api.js'
-//import { getUserActivity,getUserAverageSessions, getUserInfos, getUserPerformance, } from  "../data/data.js"
+/* import {
+  getUserActivity,
+  getUserAverageSessions,
+  getUserInfos,
+  getUserPerformance,
+} from '../data/data.js' */
 
-//let isMocked = true
-
-/* (async () => {
-    if (isMocked) {
-      // import module for side effects
-      await import({ getUserActivity,getUserAverageSessions, getUserInfos, getUserPerformance, }, "../data/data.js")
-    }else{
-        await import("../data/data.js");
-    }
-  })(); */
-
-/* if (isMocked){
-    //import { getUserActivity,getUserAverageSessions, getUserInfos, getUserPerformance, } from "./ApiCall";
-import ({ getUserActivity,getUserAverageSessions, getUserInfos, getUserPerformance, }, "./ApiCall.js")
-
-}else{
-    
-import ({ getUserActivity,getUserAverageSessions, getUserInfos, getUserPerformance, } , "../data/data.js")
-
-} */
+//soutenance 3
 
 export const getData = async (type, id) => {
   let data

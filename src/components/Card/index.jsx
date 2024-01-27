@@ -25,6 +25,10 @@ function Card({ userKeyData, unit, subtitle, className, logo }) {
   )
 }
 
+{
+  /* soutenance 14 */
+}
+
 Card.propTypes = {
   /**
    * Data number to be displayed in the card

@@ -18,9 +18,21 @@ import { getData } from '../../Services/getData.js'
 const wUser = new User()
 
 function Profil() {
+  document.title = 'Profil - SportSee'
+
+  const [data, setData] = useState([])
+  const [activityData, setActivityData] = useState([])
+  const [sessionsData, setSessionsData] = useState([])
+  const [performanceData, setPerformanceData] = useState([])
+
+  const [isLoading, SetLoading] = useState(true)
+  const [isLoading2, SetLoading2] = useState(true)
+  const [isLoading3, SetLoading3] = useState(true)
+  const [isLoading4, SetLoading4] = useState(true)
+
   let { id } = useParams()
   localStorage.setItem('user', id)
-
+  //soutenance 5
   const userDataInfos = async () => {
     const request = await getData('USER_MAIN_DATA', id)
     wUser.setUserInfos(request)
@@ -46,19 +58,6 @@ function Profil() {
   }
   userDataPerformance()
 
-  document.title = 'Profil - SportSee'
-
-  const [data, setData] = useState([])
-
-  const [isLoading, SetLoading] = useState(true)
-  const [isLoading2, SetLoading2] = useState(true)
-  const [isLoading3, SetLoading3] = useState(true)
-  const [isLoading4, SetLoading4] = useState(true)
-
-  const [activityData, setActivityData] = useState([])
-  const [sessionsData, setSessionsData] = useState([])
-  const [performanceData, setPerformanceData] = useState([])
-
   const fetchActivity = () => {
     setActivityData(wUser.userActivity)
   }
@@ -74,15 +73,14 @@ function Profil() {
   const fetchPerformance = () => {
     setPerformanceData(wUser.userPerformance)
   }
-
+  //soutenance 7
   useEffect(() => {
     fetchActivity()
-
     fetchInfo()
     fetchSessions()
     fetchPerformance()
   }, [data, performanceData, activityData, sessionsData])
-
+  //soutenance 8
   if (isLoading) {
     return <div className="App">Loading...</div>
   }
@@ -104,6 +102,7 @@ function Profil() {
             Bonjour{' '}
             <span className="profil-firstName">{data.userInfos.firstName}</span>
           </h2>
+          {/* soutenance 9 */}
           <p className="profil-subtitle">
             Félicitations ! Vous avez explosé vos objectifs hier 👏
           </p>
@@ -112,6 +111,7 @@ function Profil() {
       <div className="dashboard">
         <div className="chartsWrapper">
           <div className="activity-charts">
+            {/* soutenance 10 */}
             {activityData && <ChartActivity data={activityData.sessions} />}
           </div>
           <div className="smallChartsWrapper">

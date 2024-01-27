@@ -19,6 +19,9 @@ import CustomToolTip from './CustomToolTip'
  * @returns { React.Component } A React component
  */
 
+{
+  /* soutenance 12 */
+}
 function ChartAverageSessions({ data }) {
   const formatLabel = (value) => {
     if (value === 1) return 'L'

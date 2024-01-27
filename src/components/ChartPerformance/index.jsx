@@ -17,6 +17,11 @@ import PropTypes from 'prop-types'
  * @component
  * @returns { React.Component } A React component
  */
+
+{
+  /* soutenance 13 */
+}
+
 function ChartPerformance({ data }) {
   const renderPolarAngleAxis = ({ payload, x, y, cx, cy, ...rest }) => {
     const formatLabel = (value) => {

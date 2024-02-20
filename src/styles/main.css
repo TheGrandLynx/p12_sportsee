@@ -9,14 +9,14 @@
 /* ---------------------------------------- */
 /* ==              FONT                 */
 /*---------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* ---------------------------------------- */
@@ -80,7 +80,7 @@ h6 {
 section {
   width: 100%;
   margin-top: 5.6875rem;
-  margin-left: 7.3125rem;
+  margin-left: 10rem;
   padding-top: 2rem;
 }
 
@@ -127,7 +127,8 @@ section {
     width: 15%;
   }
 }
-.nav-link, .nav-active {
+.nav-link,
+.nav-active {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
@@ -160,7 +161,7 @@ section {
   margin: 0;
   transform: rotate(-90deg);
   color: #ffffff;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -371,4 +372,4 @@ section {
   color: #282d30;
   font-size: 1.625rem;
   font-weight: 700;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

@@ -9,7 +9,7 @@ import Settings from './pages/Settings'
 import Community from './pages/Community'
 
 import './styles/main.css'
-
+//soutenance 1
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
